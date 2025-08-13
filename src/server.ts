@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-// import morgan from "morgan";
 import compression from "compression";
 import dotenv from "dotenv";
 import AuthRoute from "./route/auth.route";
@@ -18,7 +17,7 @@ app.use(helmet());
 app.use(compression());
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || "http://localhost:5173",
+    origin: process.env.CORS_ORIGIN || "https://truss-self.vercel.app/",
     credentials: true,
   })
 );
